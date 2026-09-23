@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Report Card Generator</h1>
+    <p>Subjects aur marks daalein, result apne aap ban jayega.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2 id="formTitle">Naya report card</h2>
+      <div class="grid">
+        <label>Student ka naam<input id="studentName" placeholder="Jaise: Rahul Sharma"></label>
+        <label>Roll no.<input id="rollNo" placeholder="Jaise: 24"></label>
+        <label>Class<input id="className" placeholder="Jaise: 10th A"></label>
+        <label>Kitne subjects hain?<input id="count" type="number" min="1" max="15" placeholder="Jaise: 5"></label>
+      </div>
+      <button class="btn dark" id="makeRows">Subjects ki list banao</button>
+
+      <div id="rows"></div>
+
+      <div class="actions">
+        <button class="btn green hidden" id="saveBtn">Report card banao</button>
+        <button class="btn ghost hidden" id="cancelBtn">Edit cancel karo</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Saved report cards</h2>
+      <div id="list"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <div class="modal-bar">
+        <button class="btn dark" id="printBtn">Print / PDF</button>
+        <button class="btn ghost" id="closeBtn">Band karo</button>
+      </div>
+      <iframe id="frame" title="Report card"></iframe>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="script.js"></script>
+</body>
+</html>
